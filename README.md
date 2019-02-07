@@ -104,7 +104,8 @@ Nothing much to this. This allows the server to be run only if you run it direct
 
 If this were a library, and I tried importing app.py ```import app``` in another file, the server would not run.
 
-### 6. Run it
+## 6. Run it!
+
 Youre DONE!
 
  Run
