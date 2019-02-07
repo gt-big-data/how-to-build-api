@@ -52,7 +52,7 @@ Routes we will be making day:
 
 They are all GET methods that, if you recall, returns a payload in the response.
 
-### Index/Home Route "/"
+#### Index/Home Route "/"
 ```python
 @app.route("/", methods=['GET']) # 1.
 def index(): # METHOD
