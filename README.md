@@ -75,7 +75,7 @@ A lot going on in the same block. Let's walk through it!
 @app.route("/songs", methods=['GET'])
 def song():
     if request.method == 'GET':
-        return jsonify(get_bus_data(songs)) #Transforms data stored
+        return jsonify(songs) #Transforms data stored
     else:
         return "405: Restricted method"
 ```
