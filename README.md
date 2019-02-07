@@ -100,9 +100,14 @@ if __name__ == "__main__":
     app.run()
 ```
 
-Nothing much to this. This only allows the server to be run only if you directly run it. Note ```__name__``` is the same name in Step 2.
+Nothing much to this. This allows the server to be run only if you run it directly: ```python app.py```. Note ```__name__``` is the same name in Step 2.
 
-```python app.py```
+If this were a library, and I tried importing app.py ```import app``` in another file, the server would not run.
 
-If this were a library, and I tried importing app.py
-```import app``` in another file, the server would not run.
+### 6. Run it
+Youre DONE!
+
+ Run
+```shell
+python app.py
+```
