@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BDC - Spotify</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+  </head>
+  <body>
+    <div id="placeholder">
+
+    </div>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            var songs = JSON.parse(this.responseText);
+            for (var i = 0; i < songs.length; i++) {
+              var song = songs[i];
+              console.log(song);
+              var dom = document.getElementById('placeholder');
+              var DOM_img = document.createElement("img");
+              DOM_img.src = song.img_url;
+              DOM_img.style.width = "200px";
+              DOM_img.style.height = "200px";
+
+
+              dom.appendChild(DOM_img);
+            }
+          }
+        };
+        xhttp.open("GET", "http://localhost:5000/songs", true);
+        xhttp.send();
+    </script>
+    </body>
+  </html>

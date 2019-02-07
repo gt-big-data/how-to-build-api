@@ -108,7 +108,14 @@ If this were a library, and I tried importing app.py ```import app``` in another
 
 Youre DONE!
 
- Run
+In api/ run API server
 ```shell
 python app.py
 ```
+
+To see the UI, in a separate terminal/CMD window, in top of the directory run this command
+```shell
+python2 -m SimpleHTTPServer 8000
+```
+
+Now go to ```localhost:8000/```!
