@@ -19,11 +19,11 @@ You will need Python >= 2.7 or Python >=3.4
 
 You will also need the following packages: flask, flask_cors
 ```shell
-pip install flask, flask_cors # for Python 2
+pip install flask, flask_cors # Python 2
 
 or
 
-python3 -m pip install flask, flask_cors # for Python 3
+python3 -m pip install flask, flask_cors # Python 3
 ```
 
 ## Instructions
