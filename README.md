@@ -1,14 +1,32 @@
 # How To Build An API
+This talk was given on 2/7/2019. For supplementary information explaining the premise of an API, go [here](https://docs.google.com/presentation/d/1GwtD5kXjfVzrbJ6Uh2l4wQgwVe9uJNEcqiIKkpHqp1I/edit?usp=sharing)!
 
-This talk was given on 2/7/2019. For supplementary information, go [here](https://docs.google.com/presentation/d/1GwtD5kXjfVzrbJ6Uh2l4wQgwVe9uJNEcqiIKkpHqp1I/edit?usp=sharing)!
+In this tutorial, we will be creating the API server for our version of Spotify! The data is a JSON array of multiple song objects with attributes: title, artist, year created, and album cover image url located in Google drive. The data looks like this:
+```json
+{"songs":[
+  {"title":"Favorite Song","artist":"Chance the Rapper","year":"2015","img_url":"https://drive.google.com/file/d/1vwOMSjqkdeAl4Er0ETk_K9GR5IiyI0s4/view?usp=sharing"},
+  {"title":"SICKO MODE","artist":"Travis Scott","year":"2012","img_url":"https://drive.google.com/file/d/13F_j2ilYn1sBpGdnKb3qbunle3b8KsBT/view?usp=sharing"},
+
+  .
+  .
+  .
+  {"title":"Stay","artist":"Post Malone","year":"2016","img_url":"https://drive.google.com/file/d/1v0nFVnaA-RXHuGRgWo8_OSgzqqx6xbHJ/view?usp=sharing"}
+  ]
+}
+```
+The Google Drive folder for all the album covers is found [here](https://drive.google.com/drive/folders/1l4MfN34ReJxN86WQvpKDbdCVZCw01cve?usp=sharing)!
 
 ## System Requirements
 
-You will need Python >= 2.7
+You will need Python >= 2.7 or Python >=3.4
 
-You will also need the following package: flask
+You will also need the following packages: flask, flask_cors
 ```shell
-pip install flask
+pip install flask, flask_cors # for Python 2
+
+or
+
+python3 -m pip install flask, flask_cors # for Python 3
 ```
 
 ## Instructions
@@ -113,9 +131,27 @@ In api/ run API server
 python app.py
 ```
 
-To see the UI, in a separate terminal/CMD window, in top of the directory run this command
+To see the UI server the frontend team created for us, we need to do a couple of things!
+We will add the following two lines to the top of our file:
+```python
+from flask import Flask, request, jsonify
+import json
+from flask_cors import CORS # **NEW**
+
+app = Flask(__name__)
+CORS(app) # **NEW**
+
+```
+This will allow your frontend server's JavaScript to talk to our API server we built. It will also allow us to retrieve the album cover images from our public Google Drive folder.
+
+
+Now, in a separate Terminal/CMD window, go the top of the how-to-build-api/ directory and run this command:
 ```shell
-python2 -m SimpleHTTPServer 8000
+python -m SimpleHTTPServer 80 # Python 2
+
+# or  
+
+python3 -m http.server 80 # Python 3
 ```
 
-Now go to ```localhost:8000/```!
+Now go to ```http://localhost:80``` in to your browser!
