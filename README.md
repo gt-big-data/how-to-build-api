@@ -22,7 +22,7 @@ You will also need the following packages: flask, flask_cors
 ```shell
 pip install flask, flask_cors # Python 2
 
-or
+# or
 
 python3 -m pip install flask, flask_cors # Python 3
 ```
