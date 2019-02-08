@@ -30,7 +30,7 @@ python3 -m pip install flask, flask_cors # Python 3
 ## Instructions
 
 ### 1. Importing Flask
-Create the file server/app.py
+Create the file api/app.py
 
 Add the following lines of code to the top of your file.
 ```python
