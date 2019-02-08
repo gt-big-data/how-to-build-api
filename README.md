@@ -5,10 +5,10 @@ This talk was given on 2/7/2019. For supplementary information explaining the pr
 In this tutorial, we will be creating the API server for our version of Spotify! The data is a JSON array of multiple song objects with attributes: title, artist, year created, and album cover image url located in Google drive. The data looks like this:
 ```
 {"songs":[
-  {"title":"Favorite Song","artist":"Chance the Rapper","year":"2015","img_url":"https://drive.google.com/file/d/1vwOMSjqkdeAl4Er0ETk_K9GR5IiyI0s4/view?usp=sharing"},
-  {"title":"SICKO MODE","artist":"Travis Scott","year":"2012","img_url":"https://drive.google.com/file/d/13F_j2ilYn1sBpGdnKb3qbunle3b8KsBT/view?usp=sharing"},
+  {"title":"Favorite Song","artist":"Chance the Rapper","year":"2015","img_url":"https://drive.google.com/uc?id=1vwOMSjqkdeAl4Er0ETk_K9GR5IiyI0s4"},
+  {"title":"SICKO MODE","artist":"Travis Scott","year":"2012","img_url":"https://drive.google.com/uc?id=13F_j2ilYn1sBpGdnKb3qbunle3b8KsBT"},
   ...
-  {"title":"Stay","artist":"Post Malone","year":"2016","img_url":"https://drive.google.com/file/d/1v0nFVnaA-RXHuGRgWo8_OSgzqqx6xbHJ/view?usp=sharing"}
+  {"title":"Stay","artist":"Post Malone","year":"2016","img_url":"https://drive.google.com/uc?id=1v0nFVnaA-RXHuGRgWo8_OSgzqqx6xbHJ"}
   ]
 }
 ```
