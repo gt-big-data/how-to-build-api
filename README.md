@@ -1,5 +1,5 @@
 # How To Build An API
-![logo](https://drive.google.com/1tsoEUqYWJoT_GNsRVhNlrF4rK1xZUqRz)
+![logo](https://drive.google.com/uc?id=1tsoEUqYWJoT_GNsRVhNlrF4rK1xZUqRz)
 This talk was given on 2/7/2019. For supplementary information explaining the premise of an API, go [here](https://docs.google.com/presentation/d/1GwtD5kXjfVzrbJ6Uh2l4wQgwVe9uJNEcqiIKkpHqp1I/edit?usp=sharing)!
 
 In this tutorial, we will be creating the API server for our version of Spotify! The data is a JSON array of multiple song objects with attributes: title, artist, year created, and album cover image url located in Google drive. The data looks like this:
